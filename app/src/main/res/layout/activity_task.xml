@@ -11,6 +11,6 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="30sp"
-        android:text="Olá! Sou uma nova tela!"/>
+        android:text="Olá! Sou uma nova tela !"/>
 
 </LinearLayout>

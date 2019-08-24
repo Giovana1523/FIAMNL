@@ -48,6 +48,21 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //botao criar
+        Button criar = findViewById(R.id.registro);
+        criar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Criando um intent explícito
+                // Recupera-se o contexto da view
+                // Chama-se explicitamente a classe da activity que deseja abrir
+                Intent intent = new Intent(v.getContext(), CriarActivity.class);
+
+                // Inicia-se a activity
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

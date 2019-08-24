@@ -1,55 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
 
-
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/shape"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
-        android:hint="Email" />
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="25sp" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
-        android:hint="Senha" />
-
-    <Button
-        android:id="@+id/nextBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="140dp"
-        android:layout_marginRight="140dp"
-        android:text="Próxima" />
-    <Button
-        android:id="@+id/registro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="140dp"
-        android:layout_marginRight="140dp"
-        android:text="Registrar" />
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="16dp"
-        app:srcCompat="@drawable/mais" />
+        android:layout_centerVertical="true"
+        android:layout_margin="32dp"
+        android:padding="11dp">
+
+        <EditText
+            android:id="@+id/email_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:hint="Email"
+            android:textColorHint="#B9DFFC"
+            android:inputType="textEmailAddress"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"/>
 
 
-</LinearLayout>
+        <EditText
+            android:id="@+id/senha_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:hint="Senha"
+            android:textColorHint="#B9DFFC"
+            android:layout_below="@id/email_et"
+            android:inputType="textPassword"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/nextBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_below="@id/senha_et"
+            android:textColor="@color/cardview_light_background"
+            android:layout_marginBottom="8dp"
+            android:background="#2096f8"/>
+
+        <Button
+            android:id="@+id/registro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Criar uma conta"
+            android:layout_below="@id/nextBtn"
+            android:background="@drawable/shape2"
+            android:textColor="#2096f8"/>
+
+    </RelativeLayout>
+
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/add_icon_foreground"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"/>
+
+
+</RelativeLayout>

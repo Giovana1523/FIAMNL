@@ -1,14 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".CriarActivity">
+    android:layout_height="match_parent">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="30sp"
-        android:text="Olá! Criar!"/>
+        android:text="Criar uma conta"
+        android:layout_marginTop="198dp"
+        android:textColor="#2096f8"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="32dp"
+        android:padding="11dp">
+
+
+
+        <EditText
+            android:id="@+id/nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:hint="Nome completo"
+            android:textColorHint="#B9DFFC"
+            android:inputType="text"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/email_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:hint="Email"
+            android:layout_below="@id/nome"
+            android:textColorHint="#B9DFFC"
+            android:inputType="textEmailAddress"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"/>
+
+
+        <EditText
+            android:id="@+id/senha_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:hint="Senha"
+            android:textColorHint="#B9DFFC"
+            android:layout_below="@id/email_et"
+            android:inputType="textPassword"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/confirmar_senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:hint="Confirmar senha"
+            android:textColorHint="#B9DFFC"
+            android:layout_below="@id/senha_et"
+            android:inputType="textPassword"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"/>
+
+
+        <TextView
+            android:layout_marginTop="48dp"
+            android:id="@+id/sl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/confirmar_senha"
+            android:text="By creating an account you agree to our
+            Terms of Service and Privacy Policy"
+            android:textColor="#2096f8"
+            android:gravity="center"
+            />
+
+
+    </RelativeLayout>
+    <Button
+
+        android:id="@+id/nextBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Criar"
+       android:layout_alignParentBottom="true"
+        android:textColor="@color/cardview_light_background"
+        android:layout_marginBottom="8dp"
+        android:background="#2096f8"
+        android:layout_margin="50dp"/>
+
 </RelativeLayout>

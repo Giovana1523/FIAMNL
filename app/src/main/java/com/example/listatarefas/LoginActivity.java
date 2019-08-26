@@ -2,16 +2,13 @@ package com.example.listatarefas;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,20 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                // Criando um intent explícito
-                // Recupera-se o contexto da view
-                // Chama-se explicitamente a classe da activity que deseja abrir
-                Intent intent = new Intent(v.getContext(), TaskActivity.class);
-
-                // Inicia-se a activity
-                startActivity(intent);
-            }
-        });
         // Recuperando view da activity
         Button next = findViewById(R.id.nextBtn);
         next.setOnClickListener(new View.OnClickListener() {
@@ -42,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
                 // Criando um intent explícito
                 // Recupera-se o contexto da view
                 // Chama-se explicitamente a classe da activity que deseja abrir
-                Intent intent = new Intent(v.getContext(), TaskActivity.class);
+                Intent intent = new Intent(v.getContext(), ListaTarefasActivity.class);
 
                 // Inicia-se a activity
                 startActivity(intent);
@@ -57,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 // Criando um intent explícito
                 // Recupera-se o contexto da view
                 // Chama-se explicitamente a classe da activity que deseja abrir
-                Intent intent = new Intent(v.getContext(), CriarActivity.class);
+                Intent intent = new Intent(v.getContext(), NovaContaActivity.class);
 
                 // Inicia-se a activity
                 startActivity(intent);
